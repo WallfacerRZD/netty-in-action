@@ -28,6 +28,8 @@ hs_err_pid*
 
 # IntelliJ project files
 .idea
+target
+test
 *.iml
 out
 gen
