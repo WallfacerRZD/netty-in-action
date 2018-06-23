@@ -1,0 +1,18 @@
+package chapter10;
+
+import io.netty.buffer.ByteBuf;
+import io.netty.channel.ChannelHandlerContext;
+import io.netty.handler.codec.ReplayingDecoder;
+
+import java.util.List;
+
+/**
+ * @author WallfacerRZD
+ * @date 2018/6/23 20:49
+ */
+public class ToIntegerDecoder2 extends ReplayingDecoder<Void> {
+    @Override
+    protected void decode(ChannelHandlerContext ctx, ByteBuf in, List<Object> out) throws Exception {
+        out.add(in.readInt());
+    }
+}
